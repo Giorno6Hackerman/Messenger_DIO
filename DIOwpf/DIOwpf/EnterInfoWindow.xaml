@@ -1,0 +1,53 @@
+﻿<Window x:Class="DIOwpf.EnterInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIOwpf"
+        mc:Ignorable="d"
+        
+        Icon="Stuff/dio_main.ico"
+        Title="Enter information" Height="300" Width="450">
+    <Grid x:Name="EnterInfoGrid" Background="#911E42">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*">
+                
+            </RowDefinition>
+            <RowDefinition Height="*">
+
+            </RowDefinition>
+            <RowDefinition Height="0.75*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="NicknameStackPanel" Grid.Row="0" Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Margin="12 0 20 0" Foreground="#D3B0EE" 
+                       FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold">
+                Nickname
+            </TextBlock>
+            <TextBox x:Name="NicknameTextBox" Height="45" VerticalAlignment="Center" 
+                     Foreground="#5F1E76" FontSize="16" FontFamily="Comic Sans MS" 
+                     FontWeight="Bold" Background="#D3B0EE"  Width="316">
+                
+            </TextBox>
+        </StackPanel>
+        <StackPanel x:Name="PasswordStackPanel" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Margin="12 0 23 0" Foreground="#D3B0EE"
+                       FontSize="16" FontFamily="Comic Sans MS" FontWeight="Bold">
+                Password
+            </TextBlock>
+            <TextBox x:Name="PasswordTextBox" Height="45" VerticalAlignment="Center" 
+                     Foreground="#5F1E76" FontSize="16" FontFamily="Comic Sans MS" 
+                     FontWeight="Bold" Background="#D3B0EE"  Width="316">
+                
+            </TextBox>
+        </StackPanel>
+        <Button x:Name="OkEnterButton" Grid.Row="2" Margin="12" Background="#5F1E76" 
+                Foreground="#D3B0EE" FontSize="26" FontFamily="Comic Sans MS" 
+                FontWeight="Bold" Click="OkEnterButton_Click">
+            <Button.Content>
+                OK
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>

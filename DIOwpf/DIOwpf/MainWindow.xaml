@@ -1,0 +1,165 @@
+﻿<Window x:Class="DIOwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIOwpf"
+        mc:Ignorable="d"
+        
+        Icon="Stuff/dio_main.ico"
+        Title="DIO" Height="600" Width="1022" ResizeMode="NoResize">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <DockPanel x:Name="mainDockPanel" LastChildFill="True" Background="#911E42">
+        <Border BorderThickness="0,0,3,0" BorderBrush="#911E42">
+            <Grid x:Name="contactsGrid" DockPanel.Dock="Left" Width="250">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.15*">
+
+                    </RowDefinition>
+                    <RowDefinition>
+
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid x:Name="makeDialogGrid" Grid.Row="0">
+                    <Button x:Name="makeDialogButton" Background="#5F1E76" 
+                        Margin="20 10 20 10" HorizontalAlignment="Stretch"
+                        Foreground="#D3B0EE" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold"
+                        Click="makeDialogButton_Click" >
+                        <Button.Content>
+                            Add a dialog
+                        </Button.Content>
+                    </Button>
+                </Grid>
+                <GroupBox x:Name="dialogsGroupBox" Grid.Row="1" BorderBrush="#A50D0D" >
+                    <GroupBox.Header>
+                        <TextBlock Text="Dialogs" Foreground="#D3B0EE" 
+                       FontSize="14" FontFamily="Comic Sans MS" FontWeight="Bold" />
+                    </GroupBox.Header>
+                    <ScrollViewer x:Name="DialogsScrollViewer">
+                        <StackPanel x:Name="DialogcStackPanel">
+                            <ListBox x:Name="DialogsListBox" Visibility="Hidden">
+                                
+                            </ListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </GroupBox>
+            </Grid>
+        </Border>
+
+        <Border BorderThickness="0,3,0,0" BorderBrush="#A50D0D" >
+            <Grid x:Name="dialogGrid" Background="#5F1E76" Width="500">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.15*" >
+
+                    </RowDefinition>
+                    <RowDefinition Height="*">
+
+                    </RowDefinition>
+                    <RowDefinition Height="0.2*">
+
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+                <Border BorderThickness="0,0,0,3" BorderBrush="#A50D0D" Grid.Row="0">
+                    <Grid x:Name="contactInfoGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.15*" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="contactAvatarImage" Grid.Column="0" Source="Stuff/dio_main.jpg" Width="50">
+                            <Image.Clip>
+                                <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
+                            </Image.Clip>
+                        </Image>
+                        <Canvas x:Name="contactInfoCanvas" Grid.Column="1">
+                            <TextBlock x:Name="contactNameTextBlock" Margin="10 5 0 0" FontSize="16" 
+                                       Foreground="#F5CCCC" FontFamily="Algerian">
+                                <TextBlock.Text  >
+                                    Your first contact
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock x:Name="contactStatusTextBlock" Text="offline" Canvas.Bottom="5" Canvas.Right="15" 
+                                       Foreground="White" Opacity="0.8" FontFamily="Comic Sans MS"/>
+                        </Canvas>
+                    </Grid>
+                </Border>
+                <DockPanel x:Name="dialogDockPanel" Grid.Row="1" Background="#DDBEC3">
+                    <!--<ScrollViewer x:Name="dialogScrollViewer" Visibility="Visible">
+                        <StackPanel x:Name="dialogAreaStackPanel"  Background="#DDBEC3">
+                        </StackPanel>
+                    </ScrollViewer>-->
+                </DockPanel>
+                <Border BorderThickness="0,3,0,0" BorderBrush="#A50D0D" Grid.Row="2">
+                    <Grid x:Name="typingAreaGrid" Background="#911E42" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="0.2*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="addFileButton" Grid.Column="0" 
+                            Margin="10 15 10 15" Background="#5F1E76"
+                            Click="addFileButton_Click" IsEnabled="False" >
+                            <Button.Content>
+                                <TextBlock Text="Add file" TextWrapping="Wrap" Foreground="#D3B0EE" 
+                                    FontSize="16" FontFamily="Comic Sans MS" 
+                                    FontWeight="Bold" />
+                            </Button.Content>
+                        </Button>
+                        <TextBox x:Name="messageTextBox" Grid.Column="1" Background="#F1E4E4" 
+                                 TextWrapping="Wrap" AcceptsReturn="True"/>
+                        <Button x:Name="sendMessageButton" Grid.Column="2" IsEnabled="False" 
+                            Margin="10 15 10 15" Foreground="#D3B0EE" FontSize="16" 
+                                FontFamily="Comic Sans MS" FontWeight="Bold" Background="#5F1E76"
+                            Click="sendMessageButton_Click">
+                            <Button.Content>
+                                Send
+                            </Button.Content>
+                        </Button>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <Border BorderThickness="3,0,0,0" BorderBrush="#A50D0D">
+            <Grid DockPanel.Dock="Right" x:Name="accountGrid" Width="250" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*" />
+                    <RowDefinition Height="0.4*" />
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.1*" />
+                    <RowDefinition Height="0.1*" />
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="userNameTextBlock" Grid.Row="0" FontFamily="Algerian"
+                           Text="Your name" FontSize="18" Foreground="#D3B0EE" Margin="5" HorizontalAlignment="Center"/>
+                <Canvas Grid.Row="1">
+                    <Image x:Name="userAvatarImage" Source="Stuff/dio4.jpg" Height="200" Margin="4 10 5 10" Stretch="UniformToFill" 
+                           />
+                </Canvas>
+                <Button x:Name="changeAvatarButton" Grid.Row="2"  Click="changeAvatarButton_Click"
+                        Margin="10" Foreground="#D3B0EE" FontSize="20" FontFamily="Comic Sans MS" 
+                        FontWeight="Bold" Background="#5F1E76">
+                    <Button.Content>
+                        Change avatar
+                    </Button.Content>
+                </Button>
+                <Button x:Name="customizeFormButton" Grid.Row="3" Click="customizeFormButton_Click"
+                        Margin="10" Foreground="#D3B0EE" FontSize="20" FontFamily="Comic Sans MS" 
+                        FontWeight="Bold" Background="#5F1E76">
+                    <Button.Content>
+                        Customize form
+                    </Button.Content>
+                </Button>
+                <Button x:Name="logOutButton" Grid.Row="6" Click="logOutButton_Click"
+                        Margin="125 20 0 0" Height="30" VerticalAlignment="Bottom"
+                        Foreground="#D3B0EE" FontSize="18" FontFamily="Comic Sans MS" 
+                        FontWeight="Bold" Background="#5F1E76">
+                    <Button.Content>
+                        Log out
+                    </Button.Content>
+                </Button>
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>

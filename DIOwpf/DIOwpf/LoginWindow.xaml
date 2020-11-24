@@ -1,0 +1,44 @@
+﻿<Window x:Class="DIOwpf.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIOwpf"
+        mc:Ignorable="d"
+        
+        Icon="Stuff/dio_main.ico"
+        Title="Login" Height="300" Width="450">
+    <Grid x:Name="LoginGrid" Background="#911E42">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*">
+                
+            </RowDefinition>
+            <RowDefinition Height="*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderThickness="10" BorderBrush="#8B186C" Margin="25">
+            <Button x:Name="SignInButton" BorderBrush="#5F1E76" BorderThickness="0"
+                Background="#5F1E76" Foreground="#D3B0EE" FontSize="28" FontFamily="Comic Sans MS" 
+                FontWeight="Bold" Click="SignInButton_Click">
+                <Button.Content>
+                    Sign in
+                </Button.Content>
+            </Button>
+        </Border>
+        <Border Grid.Row="1" BorderThickness="10" BorderBrush="#8B186C" Margin="25">
+            <Button x:Name="SignUpButton" BorderBrush="#5F1E76" BorderThickness="0"
+                Background="#5F1E76" Foreground="#D3B0EE" FontSize="28" FontFamily="Comic Sans MS" 
+                FontWeight="Bold" Click="SignUpButton_Click">
+                <Button.Content>
+                    Sign up
+                </Button.Content>
+            </Button>
+        </Border>
+        <Button x:Name="StartButton" Visibility="Collapsed" Grid.Row="0" Grid.RowSpan="2" Click="StartButton_Click">
+            <Button.Content>
+                Start
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>

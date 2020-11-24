@@ -1,0 +1,51 @@
+﻿<Window x:Class="DIOwpf.CustomizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DIOwpf"
+        mc:Ignorable="d"
+        Title="Customize" Height="300" Width="400">
+    <Grid x:Name="customizeGrid" Background="#5F1E76">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" >
+            <TextBlock Width="120" Margin="15" VerticalAlignment="Center" FontSize="18"
+                       Foreground="#D3B0EE" FontFamily="Comic Sans MS" FontWeight="Bold">
+                Main color
+            </TextBlock>
+            <StackPanel x:Name="mainColorStackPanel" Width="215" Margin="10" Background="#F5CCCC"
+                        MouseDown="mainColorStackPanel_MouseDown">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Width="120" Margin="15 10 15 10" VerticalAlignment="Center" FontSize="18"
+                       Foreground="#D3B0EE" FontFamily="Comic Sans MS" FontWeight="Bold" TextWrapping="Wrap">
+                Additional color
+            </TextBlock>
+            <StackPanel x:Name="additionalColorStackPanel" Width="215" Margin="10" Background="#F5CCCC"
+                        MouseDown="additionalColorStackPanel_MouseDown">
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Width="120" Margin="15" VerticalAlignment="Center" FontSize="18"
+                       Foreground="#D3B0EE" FontFamily="Comic Sans MS" FontWeight="Bold">
+                Button color
+            </TextBlock>
+            <StackPanel x:Name="buttonColorStackPanel" Width="215" Margin="10" Background="#F5CCCC"
+                        MouseDown="buttonColorStackPanel_MouseDown">
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="customizeButton" Grid.Row="3" Margin="20 10 20 10" Background="#911E42" FontSize="18"
+                       Foreground="#D3B0EE" FontFamily="Comic Sans MS" FontWeight="Bold"
+                       Click="customizeButton_Click">
+            <Button.Content >
+                Save
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>
