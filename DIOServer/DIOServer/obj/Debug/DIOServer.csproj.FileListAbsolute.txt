@@ -1,0 +1,14 @@
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.exe.config
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.exe
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.pdb
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.csprojAssemblyReference.cache
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.csproj.CoreCompileInputs.cache
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.exe
+D:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.pdb
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.exe.config
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.exe
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\bin\Debug\DIOServer.pdb
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.csprojAssemblyReference.cache
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.csproj.CoreCompileInputs.cache
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.exe
+e:\prog\4 sem\KSIS\kursach\try\DIOServer\DIOServer\obj\Debug\DIOServer.pdb
